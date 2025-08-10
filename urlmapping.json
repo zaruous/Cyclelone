@@ -30,6 +30,36 @@
                 }
             ]
 			
+		},
+		{
+			"version": 1,
+			"path": "/suno",
+			"controller" : "com.kyj.api.cyclelone.impl.suno.SunoController",
+			"description": "음악 처리 핸들링",
+			"methods": [
+                {
+                    "name": "generate",
+                    "method": "POST",
+                    "description": "생성",
+                    "parameters": [
+                        {
+                            "name": "content",
+                            "type": "String",
+                            "description": "UML 생성 컨텐츠"
+                        }
+                    ],
+                    "responses": [
+                        {
+                            "status": 200,
+                            "description": "success."
+                        },
+                        {
+                            "status": 404,
+                            "description": "failed."
+                        }
+                    ]
+                }
+            ]
 		}
 	]
 }
