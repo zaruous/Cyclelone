@@ -55,7 +55,7 @@ urlmapping.json에 정의된 주요 엔드포인트는 다음과 같습니다:
 
 경로	메서드	설명
 /uml	POST	UML 생성 컨텐츠를 받아 UML 다이어그램 이미지를 반환합니다.
-/suno	POST	Suno API를 통해 음악을 생성하기 위한 프록시 역할을 수행합니다.
+/suno	POST	Suno API를 통해 음악을 생성하기 위한 프록시 역할을 수행합니다. <추후 작성 예정>
 
 Sheets로 내보내기
 예제
