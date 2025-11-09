@@ -60,6 +60,34 @@
                     ]
                 }
             ]
+		},
+		{
+			"version": 1,
+			"path": "/slack/message",
+			"controller" : "com.kyj.api.cyclelone.impl.slack.SlackController",
+			"description": "음악 처리 핸들링",
+			"methods": [
+                {
+                    "name": "sendMessage",
+                    "method": "POST",
+                    "description": "메세지전송",
+                    "parameters": [{
+                         "name": "message",
+                         "type": "String",
+                         "description": "메세지"
+                    }],
+                    "responses": [
+                        {
+                            "status": 200,
+                            "description": "success."
+                        },
+                        {
+                            "status": 404,
+                            "description": "failed."
+                        }
+                    ]
+                }
+            ]
 		}
 	]
 }

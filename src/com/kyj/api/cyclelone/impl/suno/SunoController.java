@@ -3,9 +3,6 @@
  */
 package com.kyj.api.cyclelone.impl.suno;
 
-import java.net.URI;
-
-import org.apache.http.HttpRequest;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
@@ -30,6 +27,7 @@ public class SunoController {
 		//Origin: https://suno.com
 		
 		HttpClientBuilder httpClientBuilder = HttpClientBuilder.create();
+//		httpClientBuilder.setDefaultCookieStore(DefaultCookieStore.getInstance());
 		HttpClient httpClient = httpClientBuilder.build();
 		
 		HttpPost request = new HttpPost("https://suno.com/api/generate/v2-web/");
@@ -37,6 +35,7 @@ public class SunoController {
 		request.addHeader("Host", "studio-api.prod.suno.com");
 		request.addHeader("Referer", "https://suno.com/");
 //		request.addHeader("Authorization", "Bearer eyJhbGciOiJSUzI1NiIsImNhdCI6ImNsX0I3ZDRQRDExMUFBQSIsImtpZCI6Imluc18yT1o2eU1EZzhscWRKRWloMXJvemY4T3ptZG4iLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJzdW5vLWFwaSIsImF6cCI6Imh0dHBzOi8vc3Vuby5jb20iLCJleHAiOjE3NTQ4MzI1OTQsImZ2YSI6WzI5MiwtMV0sImh0dHBzOi8vc3Vuby5haS9jbGFpbXMvY2xlcmtfaWQiOiJ1c2VyXzMweWZlZzJSSG9weUtVZW1HZEF1Zjk5TkRVYiIsImh0dHBzOi8vc3Vuby5haS9jbGFpbXMvZW1haWwiOiJjYWxsYWtyc29zMkBnbWFpbC5jb20iLCJodHRwczovL3N1bm8uYWkvY2xhaW1zL3Bob25lIjpudWxsLCJpYXQiOjE3NTQ4Mjg5OTQsImlzcyI6Imh0dHBzOi8vY2xlcmsuc3Vuby5jb20iLCJqdGkiOiJjNGZkMzAxMWYyNTk3NzJjN2VkNiIsIm5iZiI6MTc1NDgyODk4NCwic2lkIjoic2Vzc18zMTVRVDlFVjRVY0hHdzNWU2VsNm1HZFBuMWkiLCJzdWIiOiJ1c2VyXzMweWZlZzJSSG9weUtVZW1HZEF1Zjk5TkRVYiJ9.g00RkulE6moJX2OdKvIHBCuKhGZgEEXpjDPSAJ3F5Tk9_xGBBeA8iLF5IqlYAh1pmdQAtETkzJZl_IRS9eJMbeQjQ-T4LcbpJVLn5QeIdSgyFk6vL8nTiO2-tlvK8lmKmTpUa5bXY7udAwJ1JYFivu9phoBk0RfBHqtpg73f_rP7RF6RNtC7l9xNjX1DvNWFpbZJLdXe4s3rNgYx2exgUCksLWKP-HN31HRn4Ut6zOafhh1brNFQNq8jU2WvW_CCmGXSweb6Km5hs78yx2TCeEXJpHsz7qGs19YEkr1hquQPhwysProdUvXGjjO7xYa3N5amIkDzl4Lnv27hPczkTA");
+		
 		
 		HttpResponse execute = httpClient.execute(request);
 		ctx.status(execute.getStatusLine().getStatusCode());

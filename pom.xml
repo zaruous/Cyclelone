@@ -80,6 +80,15 @@
 		<artifactId>httpclient</artifactId>
 		<version>4.5.13</version>
 		</dependency>
+		
+		    
+    <!-- https://mvnrepository.com/artifact/com.slack.api/slack-api-client -->
+<dependency>
+    <groupId>com.slack.api</groupId>
+    <artifactId>slack-api-client</artifactId>
+    <version>1.45.4</version>
+</dependency>
+
 	</dependencies>
 
 </project>
